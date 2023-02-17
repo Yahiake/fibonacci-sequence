@@ -1,16 +1,12 @@
 def main():
-    nsequence = int(input("Enter how many Fibonacci sequences to calculate : "))
-    x,y = 0,1
-    count = 0
-    if nsequence <=0:
+    x=int(input("How many fibonacci sequences you want me to write?: "))
+    a, b, c = 1,0,0
+    if x <=0:
         print("Enter a positive Interger!")
         main()
-    else:
-        while nsequence > count :
-            print(x)
-            f = x + y
-            y = x
-            x = f
-            count += 1
-        print("Goodbye!")
+    for d in range(0,x):
+        print(c, end=" ")
+        c = a + b
+        a = b
+        b = c
 main()
