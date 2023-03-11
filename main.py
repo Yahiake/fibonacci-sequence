@@ -1,12 +1,6 @@
-def main():
-    x=int(input("How many fibonacci sequences you want me to write?: "))
-    a, b, c = 1,0,0
-    if x <=0:
-        print("Enter a positive Interger!")
-        main()
-    for d in range(0,x):
-        print(c, end=" ")
-        c = a + b
-        a = b
-        b = c
-main()
+#i'm still learning about python from time to time (newbie hoobiest) so i just came up with a different approach to calculate the sequences using lists
+n = int(input("how many sequences: "))
+fibonacci = [0 , 1]
+while n > len(fibonacci):
+    fibonacci.append(fibonacci[-1] + fibonacci[-2])
+print(fibonacci)
